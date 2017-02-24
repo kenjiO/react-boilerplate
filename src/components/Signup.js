@@ -2,9 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
-import { signup } from '../../actions'
+import { signup } from '../actions'
 
-import { FormTitle, FooterLink } from '../Styled'
+import { FormTitle, FooterLink } from './Styled'
 import Form from './Form'
 
 const Signup = ({ user, signup }) => {
@@ -15,7 +15,8 @@ const Signup = ({ user, signup }) => {
   }
 
   return (
-    <div>
+    <div style={{ border: "1px solid black", margin: '5px', width: '500px', padding: '5px' }}>
+      Signup
       <FormTitle>Sign up</FormTitle>
       <Form onSubmit={handleSubmit} />
       <FooterLink to="/login">Already have an account ?</FooterLink>

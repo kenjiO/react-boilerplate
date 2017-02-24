@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-export const Body = styled.div`
-  text-align: center;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-`
 
 export const Title = styled.h1`
   font-family: sans-serif;
@@ -22,13 +18,6 @@ const Github = styled.span`
   font-family: sans-serif;
 `
 
-export const GithubButton = styled(Github)`
-  border-radius: 3px 0 0 3px;
-  background: rgb(248, 248, 248);
-  &:hover {
-    background: rgb(238, 238, 238);
-  }
-`
 
 export const GithubCount = styled(Github)`
   margin-left: -1px;

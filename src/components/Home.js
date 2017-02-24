@@ -4,11 +4,17 @@ import { Redirect } from 'react-router-dom'
 
 import { Message, Blue } from './Styled'
 
-const Home = ({ user }) => (
-  user.token
-    ? <Message>{'You\'re logged in as '}<Blue>{user.email}</Blue></Message>
-    : <Redirect to="/login" />
-)
+const Home = ({ user }) => {
+  if (user.token) {
+    console.log('user.token is: ', user.token)
+    return <Message>{'You\'re logged in as '}<Blue>{user.email}</Blue></Message>
+  } else {
+    console.log('user.token not set')
+    return <Redirect to="/login" />
+  }
+}
+
+
 
 Home.propTypes = {
   user: React.PropTypes.shape({}).isRequired,

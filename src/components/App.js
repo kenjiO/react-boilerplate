@@ -3,20 +3,19 @@ import { connect } from 'react-redux'
 import { Route, Redirect } from 'react-router-dom'
 import Async from 'react-code-splitting'
 
-import Login from './Auth/Login'
-import Signup from './Auth/Signup'
-import Header from './Header'
-import { Body } from './Styled'
+import Login from './Login'
+import Signup from './Signup'
+import Github from './Github'
 
 const Home = () => <Async load={import('./Home')} />
 
 const App = ({ user }) => (
-  <Body>
-    <Header />
+  <div>
+    <Github />
     {user.token ? <Route path="/" component={Home} /> : <Redirect to="/login" />}
     <Route path="/signup" component={Signup} />
     <Route path="/login" component={Login} />
-  </Body>
+  </div>
 )
 
 App.propTypes = {
