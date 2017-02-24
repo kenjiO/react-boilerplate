@@ -36,7 +36,7 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       title: 'redux-react-starter',
-      template: '../webpack/template.html',
+      template: './index.html',
     }),
   ],
   performance: { hints: false },
