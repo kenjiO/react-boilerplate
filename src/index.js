@@ -7,7 +7,7 @@ import { store } from './store'
 
 import App from './components/App'
 
-export const Root = () => (
+const Root = () => (
   <Provider store={store}>
     <BrowserRouter>
       <App />
@@ -15,4 +15,6 @@ export const Root = () => (
   </Provider>
 )
 
-if (!module.hot) render(<Root />, document.querySelector('react'))
+render(<Root />, document.querySelector('react'))
+
+export default Root

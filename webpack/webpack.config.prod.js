@@ -1,7 +1,6 @@
 const { resolve } = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const OfflinePlugin = require('offline-plugin')
 
 module.exports = {
   entry: {
@@ -43,13 +42,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       title: 'redux-react-starter',
-      template: 'webpack/template.html',
-    }),
-    new OfflinePlugin({
-      ServiceWorker: {
-        navigateFallbackURL: '/',
-      },
-      AppCache: false,
-    }),
+      template: 'src/index.html',
+    })
   ],
 }
