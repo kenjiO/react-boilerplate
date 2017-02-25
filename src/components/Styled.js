@@ -69,13 +69,12 @@ export const TextField = styled.input`
 `
 
 export const Submit = styled.input`
-  border: none;
   color: rgb(0, 128, 255);
-  font-size: 24px;
+  font-size: 18px;
   background: none;
   outline: none;
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 10px;
 `
 
 export const FooterLink = styled(Link)`

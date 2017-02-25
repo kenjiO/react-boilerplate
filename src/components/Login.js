@@ -16,11 +16,10 @@ const Login = ({ user, login }) => {
 
   return (
     <div style={{ border: "1px solid black", margin: '5px', width: '500px', padding: '5px' }}>
-      Login
-      <FormTitle>Login</FormTitle>
+      Login.js
       <Form onSubmit={handleSubmit} />
       <FooterLink to="/signup">{'You don\'t have an account ?'}</FooterLink>
-      {user.token && <Redirect to="/" />}
+      {/*{user.token && <Redirect to="/" />}*/}
     </div>
   )
 }

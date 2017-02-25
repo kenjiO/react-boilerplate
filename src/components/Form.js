@@ -3,7 +3,7 @@ import React from 'react'
 import { TextField, Submit } from './Styled'
 
 const Form = ({ onSubmit }) => (
-  <div style={{ border: "1px solid black", margin: '5px', width: '500px', padding: '5px' }}>
+  <div style={{ border: "1px solid black", margin: '5px', width: '400px', padding: '5px' }}>
     Form.js
     <form onSubmit={onSubmit}>
       <TextField
@@ -18,7 +18,6 @@ const Form = ({ onSubmit }) => (
         name="password"
         placeholder="Password"
         title="Type a strong password: aBC_123^"
-        pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$"
         required
       />
       <Submit type="submit" value="Continue" />
