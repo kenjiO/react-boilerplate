@@ -3,7 +3,9 @@ import { Provider } from 'react-redux'
 import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 
-import { store } from './store'
+import store from './store/store'
+// import configureStore from './store/configure-store'
+// const store = configureStore()
 
 import App from './components/App'
 

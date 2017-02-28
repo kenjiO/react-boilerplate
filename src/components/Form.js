@@ -12,6 +12,7 @@ const Form = ({ onSubmit }) => (
         placeholder="Email address"
         title="Enter your email address"
         required
+        value="abc@example.comfds"
       />
       <TextField
         type="password"
@@ -19,6 +20,7 @@ const Form = ({ onSubmit }) => (
         placeholder="Password"
         title="Type a strong password: aBC_123^"
         required
+        value="123ABCdef!"
       />
       <Submit type="submit" value="Continue" />
     </form>

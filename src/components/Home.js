@@ -7,7 +7,7 @@ import { Message, Blue } from './Styled'
 const Home = ({ user }) => {
   if (user.token) {
     console.log('user.token is: ', user.token)
-    return <Message>{'You\'re logged in as '}<Blue>{user.email}</Blue></Message>
+    return <Message><div>Home.js</div>{'You\'re logged in as '}<Blue>{user.email}</Blue></Message>
   } else {
     console.log('user.token not set')
     return <Redirect to="/login" />

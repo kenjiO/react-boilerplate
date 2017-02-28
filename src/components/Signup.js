@@ -18,7 +18,7 @@ const Signup = ({ user, signup }) => {
     <div style={{ border: "1px solid black", margin: '5px', width: '500px', padding: '5px' }}>
       Signup.js
       <Form onSubmit={handleSubmit} />
-      <FooterLink to="/login">Already have an account ?</FooterLink>
+      <FooterLink to="/login">Already have an account?</FooterLink>
       {/*{user.token && <Redirect to="/" />}*/}
     </div>
   )
