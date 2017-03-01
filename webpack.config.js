@@ -1,7 +1,7 @@
 const { resolve } = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = {
   entry: [
     'react-hot-loader/patch',
@@ -38,7 +38,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         use: ['babel-loader'],
-        include: [resolve(__dirname, 'src'), resolve(__dirname)],
+        include: [resolve(__dirname, 'src')],
         exclude: /node_modules/,
       },
     ],
@@ -50,6 +50,9 @@ module.exports = {
       title: '',
       template: './index.html',
     }),
+    new CopyWebpackPlugin([
+      { from: resolve(__dirname, 'public'), to: resolve(__dirname, 'dist')}
+    ])
   ],
   performance: { hints: false },
   //performance: { hints: 'warning' },
