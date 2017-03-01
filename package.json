@@ -13,21 +13,6 @@
   },
   "author": "Didier Franc",
   "license": "MIT",
-  "devDependencies": {
-    "babel-core": "^6.22.1",
-    "babel-eslint": "^7.0.0",
-    "babel-jest": "^18.0.0",
-    "babel-loader": "^6.2.10",
-    "babel-plugin-styled-components": "0.0.3-0",
-    "babel-plugin-transform-runtime": "^6.22.0",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.22.0",
-    "babel-preset-stage-0": "^6.22.0",
-    "babel-runtime": "^6.22.0",
-    "html-webpack-plugin": "^2.24.1",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0"
-  },
   "dependencies": {
     "axios": "^0.15.3",
     "lodash": "^4.17.4",
@@ -40,37 +25,43 @@
     "redux-thunk": "^2.2.0",
     "styled-components": "^1.4.2"
   },
-  "babel": {
-    "presets": [
-      [
-        "es2015",
-        {
-          "modules": false
-        }
-      ],
-      "react",
-      "stage-0"
-    ],
-    "plugins": [
-      [
-        "transform-runtime",
-        {
-          "helpers": false,
-          "polyfill": false
-        }
-      ]
-    ],
-    "env": {
-      "development": {
-        "plugins": [
-          "styled-components"
-        ]
-      },
-      "test": {
-        "plugins": [
-          "transform-es2015-modules-commonjs"
-        ]
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.0.0",
+    "babel-jest": "^18.0.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-styled-components": "0.0.3-0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "babel-runtime": "^6.22.0",
+    "html-webpack-plugin": "^2.24.1",
+    "install": "^0.8.7",
+    "npm": "^4.3.0",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  },
+  "plugins": [
+    [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false
       }
+    ]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "styled-components"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
     }
   }
 }
