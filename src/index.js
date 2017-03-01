@@ -1,8 +1,8 @@
 import React from 'react'
-import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
-import { AppContainer } from 'react-hot-loader';
+import { AppContainer } from 'react-hot-loader'
 
 import store from './store/store'
 import App from './components/App'

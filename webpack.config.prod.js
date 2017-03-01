@@ -1,10 +1,11 @@
 const { resolve } = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
-    main: resolve(__dirname, '../src'),
+    main: resolve(__dirname, 'src'),
     vendor: [
       'react',
       'react-dom',
@@ -12,20 +13,20 @@ module.exports = {
       'react-router-dom',
       'redux',
       'redux-thunk',
-      'styled-components',
     ],
   },
   output: {
     filename: '[name].[chunkhash].js',
-    path: resolve(__dirname, '../dist'),
+    path: resolve(__dirname, 'dist'),
     publicPath: '/',
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        include: [resolve(__dirname, '../src')],
+        include: [resolve(__dirname, 'src')],
         use: 'babel-loader',
+        exclude: /node_modules/,
       },
     ],
   },
@@ -42,7 +43,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       title: 'redux-react-starter',
-      template: 'src/index.html',
-    })
+      template: resolve(__dirname, 'src/index.html')
+    }),
+    new CopyWebpackPlugin([
+      { from: resolve(__dirname, 'public'), to: resolve(__dirname, 'dist') }
+    ])
   ],
+  performance: { hints: 'warning' }
 }
