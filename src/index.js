@@ -1,22 +1,29 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { render } from 'react-dom'
+import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
+import { AppContainer } from 'react-hot-loader';
 
 import store from './store/store'
-// import configureStore from './store/configure-store'
-// const store = configureStore()
-
 import App from './components/App'
 
-const Root = () => (
-  <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Provider>
-)
+const render = (Component) => {
+  ReactDOM.render(
+    <AppContainer>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Component />
+        </BrowserRouter>
+      </Provider>
+    </AppContainer>,
+    document.getElementById('root')
+  )
+}
 
-render(<Root />, document.querySelector('react'))
+render(App);
 
-export default Root
+if (module.hot) {
+  module.hot.accept('./components/App', () => {
+    render(App)
+  })
+}

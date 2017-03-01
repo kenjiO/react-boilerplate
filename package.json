@@ -3,8 +3,8 @@
   "version": "1.2.0",
   "description": "Get started.",
   "scripts": {
-    "start": "webpack-dev-server --config webpack/webpack.config.dev.js",
-    "build": "rm -rf dist && webpack --config webpack/webpack.config.prod.js  && cp -a assets/ dist/",
+    "start": "webpack-dev-server",
+    "build": "rm -rf dist && webpack --config webpack.config.prod.js  && cp -a assets/ dist/",
     "prod": "serve ./dist -s"
   },
   "repository": {

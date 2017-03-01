@@ -11,8 +11,7 @@ import HomeComponent from './HomeComponent'
 import UserClassContainer from '../containers/UserClassContainer'
 
 
-const App = ({ user }) => {
-  return (
+const App = ( {user} ) => (
     <div style={{ border: "1px solid black", margin: '5px', width: '600px', padding: '5px' }}>
       <div>App.js</div>
       <div>User is {JSON.stringify(user)}</div>
@@ -26,7 +25,7 @@ const App = ({ user }) => {
       <Route path="/UserClassContainer" component={UserClassContainer} />
     </div>
   )
-}
+
 
 App.propTypes = {
   user: React.PropTypes.shape({}).isRequired,
