@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import AddContainer from './AddContainer'
 import { incrementAction } from '../actions/counter-actions'
 
-let IncrementContainer = ({ onIncrementClick, counter }) => (
+const IncrementContainer = ({ onIncrementClick, counter }) => (
     <div style={{ border: "1px solid black", margin: '15px', width: '400px', padding: '10px' }}>
         IncrementContainer <br />
         {counter}<br />
@@ -28,6 +28,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-IncrementContainer = connect(mapStateToProps, mapDispatchToProps)(IncrementContainer)
-
-export default IncrementContainer
+export default connect(mapStateToProps, mapDispatchToProps)(IncrementContainer)

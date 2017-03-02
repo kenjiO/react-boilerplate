@@ -13,7 +13,7 @@ const initialState = {
     error: undefined
 }
 
-const userReducer = function (state = initialState, action) {
+const userReducer = (state = initialState, action) => {
     switch (action.type) {
         case REQUEST_LOGIN:
             return Object.assign({}, state, { user: undefined, error: undefined, isLoading: true })

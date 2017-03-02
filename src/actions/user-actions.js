@@ -10,7 +10,6 @@ export const login = (username, password) => (dispatch, getState) => {
     dispatch(requestLoginActionCreator())
 
     let URL = 'https://food-bank-app-demo.herokuapp.com/auth/signin'
-    URL = 'https://jsonplaceholder.typicode.com/posts'
     URL = 'http://demo5602050.mockable.io/d'
 
     axios.post(URL, {user: username, password: password})
@@ -24,7 +23,7 @@ export const login = (username, password) => (dispatch, getState) => {
             } else {
                 dispatch({type: REQUEST_LOGIN_ERROR, error: err.message })
             }
-        });    
+        })    
 }
 
 export const logout = () => (dispatch, getState) => {

@@ -3,19 +3,12 @@ import {
     ADD
 } from '../actions/counter-actions'
 
-const counterReducer = function(state = {counter: 1}, action) {
-    // console.log('counterReducer called with ', state, action)
-    let newState
-
+const counterReducer = (state = {counter: 1}, action) => {
     switch (action.type) {
         case INCREMENT:
-            newState = Object.assign({}, state, {counter: state.counter + 1})
-            // console.log ('    newState is ', newState)
-            return newState;
+            return Object.assign({}, state, {counter: state.counter + 1})
         case ADD:
-            newState = Object.assign({}, state, {counter: state.counter + action.value})
-            // console.log ('    newState is ', newState)
-            return newState;          
+            return Object.assign({}, state, {counter: state.counter + action.value})
         default:
             return state
     } 

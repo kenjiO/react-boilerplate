@@ -4,8 +4,10 @@ import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import { AppContainer } from 'react-hot-loader'
 
-import store from './store/store'
+import configureStore from './store/configure-store'
 import App from './components/App'
+
+const store = configureStore()
 
 const render = (Component) => {
   ReactDOM.render(
