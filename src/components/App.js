@@ -3,9 +3,6 @@ import { connect } from 'react-redux'
 import { Route } from 'react-router-dom'
 
 import Header from './Header'
-import Github from './Github'
-import Signup from './Signup'
-import Login from './Login'
 import IncrementContainer from '../containers/IncrementContainer'
 import HomeComponent from './HomeComponent'
 import UserClassContainer from '../containers/UserClassContainer'
@@ -16,11 +13,8 @@ const App = ( {user} ) => (
       <div>App.js</div>
       <div>User is {JSON.stringify(user)}</div>
       <Header />
-      <Github />
       
       <Route exact path="/" component={HomeComponent} />
-      <Route path="/signup" component={Signup} />
-      <Route path="/login" component={Login} />
       <Route path="/increment" component={IncrementContainer} />
       <Route path="/UserClassContainer" component={UserClassContainer} />
     </div>
